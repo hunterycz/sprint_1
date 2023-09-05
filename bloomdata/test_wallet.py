@@ -1,9 +1,12 @@
 from bloomdata.wallet import Wallet
 import pytest
 
+
 @pytest.fixture
 def empty_wallet():
     return Wallet()
+
+# '@' is a decorator
 
 
 @pytest.fixture
@@ -27,4 +30,3 @@ def test_wallet_20_spend_10(wallet_20):
 def test_spend_all_cash(wallet_20):
     assert wallet_20.spend_cash(15) == \
         f'remaining balance: {wallet_20.balance}'
-

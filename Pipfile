@@ -6,7 +6,6 @@ name = "pypi"
 [packages]
 pandas= "==1.5.3"
 numpy = "*"
-scikit-learn = "*"
 
 [dev-packages]
 flake8 = "*"

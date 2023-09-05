@@ -1,5 +1,7 @@
 import pytest
 import bloomdata.helper_functions as hf
+import numpy as np
+
 
 adjectives = ['blue', 'large', 'grainy',
               'substantial', 'potent', 'thermonuclear']
@@ -14,3 +16,19 @@ def test_random_phrase():
     assert type(hf.random_phrase(list1, list2)) == str
     assert hf.random_phrase(['Ryan'], ['Allred']) == 'Ryan Allred'
     assert hf.random_phrase([3], [4]) == '3 4'
+
+# 3 new pytest functions for module 4 guide project
+
+# check if output is a float
+
+
+def test_random_float():
+    assert isinstance(hf.random_float(0, np.random.randint(1, 101)), float)
+
+
+def test_random_float_all_0():
+    assert isinstance(hf.random_float(0, 0), float)
+
+
+def test_silly_tuple_is_tuple():
+    assert isinstance(hf.silly_tuple(), tuple)
